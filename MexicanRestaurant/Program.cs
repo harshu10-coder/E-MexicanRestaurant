@@ -12,7 +12,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+<<<<<<< HEAD
     .AddRoles<IdentityRole>()
+=======
+>>>>>>> c1a8722ef73c4dbd4fec6dbf10f1525714f22f4d
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
@@ -40,6 +43,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();
+<<<<<<< HEAD
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -58,6 +62,10 @@ app.MapControllerRoute(
     pattern: "{area:exists}/{controller=Ingredient}/{action=Index}/{id?}");
     
 
+=======
+app.UseAuthorization();
+
+>>>>>>> c1a8722ef73c4dbd4fec6dbf10f1525714f22f4d
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Ingredient}/{action=Index}/{id?}");
